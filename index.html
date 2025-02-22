@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testnet Faucet</title>
+    <style>
+        body {
+            background-color: #4B0082;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+        }
+        h2 {
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 14px;
+            margin-bottom: 20px;
+            color: #ccc;
+        }
+        input {
+            width: 80%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #9400D3;
+            background: #8A2BE2;
+            color: white;
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #BA55D3;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        button:hover {
+            background-color: #9932CC;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>FREE MONAD TESTNET</h2>
+        <input type="text" id="walletAddress" placeholder="ENTER YOUR ADDRESS">
+        <br>
+        <button onclick="sendSubmit()">Submit</button>
+    </div>
+
+    <script>
+        function sendSubmit() {
+            let address = document.getElementById("walletAddress").value.trim();
+            if (address === "") {
+                alert("Please enter a valid address.");
+            } else {
+                alert("Request sent for: " + address);
+                document.getElementById("walletAddress").value = "";
+            }
+        }
+    </script>
+
+</body>
+</html>
